@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WellStory Media — Style Guide (Creative Gradient • v8)</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="assets/wellstory-logo.png" alt="WellStory Media logo" class="logo"/>
+      <h1>STYLEGUIDE</h1>
+    </div>
+  </header>
+
+  <div class="spacer"></div>
+
+  <main class="container grid">
+    <section class="panel tokens">
+      <div>
+        <h2>Typography</h2>
+        <h1>H1 — Story-Driven Video Production that Connects and Inspires</h1>
+        <p>Lato Bold · 56px · <code>#154771</code></p>
+        <h2>H2 — Professional • Approachable • Creative</h2>
+        <p>Lato Regular · 32–36px · <code>#154771</code> or <code>#FFB629</code></p>
+        <h3>H3 — Services, Case Studies, and Testimonials</h3>
+        <p>Lato Regular · 24–28px · <code>#75C9E3</code></p>
+        <p><strong>Body text:</strong> Source Sans 3, 16–18px, color <code>#333333</code>. <span class="hypertext">Links use</span> <code>#75C9E3</code> (hover to <code>#FFB629</code>).</p>
+      </div>
+      <div>
+        <h2>Color Palette</h2>
+        <div class="swatches">
+          <div><div class="chip" style="background:#154771"></div><div class="label"><strong>Navy</strong> #154771</div></div>
+          <div><div class="chip" style="background:#75C9E3"></div><div class="label"><strong>Sky</strong> #75C9E3</div></div>
+          <div><div class="chip" style="background:#A5C5C2"></div><div class="label"><strong>Aqua</strong> #A5C5C2</div></div>
+          <div><div class="chip" style="background:#FFB629"></div><div class="label"><strong>Amber</strong> #FFB629</div></div>
+          <div><div class="chip" style="background:#AEABAC"></div><div class="label"><strong>Cool Gray</strong> #AEABAC</div></div>
+          <div><div class="chip" style="background:#FEFCF9; border:1px solid #ddd"></div><div class="label"><strong>Soft White</strong> #FEFCF9</div></div>
+        </div>
+
+        <div class="overlap3d">
+          <div class="block one"></div>
+          <div class="block two"></div>
+          <div class="block three"></div>
+          <div class="block four"></div>
+        </div>
+        <p style="color:#666;font-size:.92rem;margin-top:.4rem">Four translucent layers (Amber, Aqua, Sky, Navy) with lighter opacity to avoid melting together.</p>
+      </div>
+      <div class="cta-dock">  
+  <div class="cta-group"></div>
+
+</div>
+</section>
+
+    <section class="panel">
+      <h2>Usage Examples</h2>
+      <div class="usage-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem">
+        <!-- Contact-style demo -->
+        <div class="contact-demo">
+          <h3 style="color:var(--navy)">Cool Gray as UI Chrome (Contact Form)</h3>
+          <p class="mini">Heavier Cool Gray borders on fields and container</p>
+          <div class="divider" style="height:2px; background:var(--cool-gray); opacity:.6; margin:1rem 0"></div>
+          <form>
+            <div class="form-grid">
+              <div>
+                <label class="label" for="name">Name</label>
+                <input class="input" id="name" placeholder="Your full name"/>
+              </div>
+              <div>
+                <label class="label" for="email">Email</label>
+                <input class="input" id="email" type="email" placeholder="you@company.com"/>
+              </div>
+              <div style="grid-column:1 / -1">
+                <label class="label" for="message">Message</label>
+                <textarea class="textarea" id="message" placeholder="Tell us about your project"></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+            </div>
+          </form>
+        </div>
+
+        <!-- Muted Aqua features -->
+        <div class="aqua-section">
+          <h3 style="color:var(--navy)">Muted Aqua as Section Background</h3>
+          <p class="mini">A softer complementary tone that bridges dark navy and neutrals</p>
+          <div class="aqua-features">
+            <div class="aqua-card">
+              <h4>Section Background</h4>
+              <p>Soft canvas that doesn’t compete with content.</p>
+            </div>
+            <div class="aqua-card">
+              <h4>Subtle Gradient</h4>
+              <p>Gentle fade adds depth to content blocks.</p>
+            </div>
+            <div class="aqua-card">
+              <h4>Graphic Accent</h4>
+              <p>Badges or tabs highlighted with light aqua.</p>
+            </div>
+            <div class="aqua-card">
+              <h4>Overlay Panels</h4>
+              <p>Low-opacity aqua overlays unify visuals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-dock">  
+  <div class="cta-group"></div>
+
+</div>
+</section>
+
+    <section class="panel" id="cta">
+      <div class="cta-bar">
+        <h2>Call To Action</h2>
+        <div class="cta-dock">  
+  <div class="cta-group"><a class="hyperlink" href="#">See Work Examples</a><a class="button button-secondary" href="#">Learn More</a><a class="button button-primary" href="#">Start Your Project</a></div>
+
+  </div>
+</div>
+</section>
+  </main>
+
+  <footer class="footer" style="text-align:center;margin:1.5rem 0;color:#666;font-size:.92rem">
+    © 2025 WellStory Media
+  </footer>
+
+</body>
+</html>

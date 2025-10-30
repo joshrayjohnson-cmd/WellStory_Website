@@ -1,0 +1,168 @@
+
+/* WellStory Media — Custom Styles (over Bootstrap) */
+/* Typography: Lato (headings), Source Sans 3 (body) */
+/* Color tokens from styleguide */
+:root{
+  --navy:#154771;
+  --sky:#75C9E3;
+  --aqua:#A5C5C2;
+  --amber:#FFB629;
+  --soft:#FEFCF9;
+  --gray:#AEABAC;
+  --ink:#333333;
+
+  /* Derived */
+  --amber-700:#E6A320;
+  --navy-900:#0E3553;
+
+  /* Spacing scale */
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+html { scroll-behavior: smooth; }
+body{
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: var(--ink);
+  background: var(--soft);
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, .h1, .h2, .h3{
+  font-family: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--navy);
+  letter-spacing: .2px;
+}
+h1, .h1{ font-weight: 800; }
+h2, .h2{ font-weight: 700; }
+h3, .h3{ font-weight: 700; }
+
+/* Fluid type for hero */
+.hero-title{
+  font-weight: 800;
+  line-height: 1.1;
+  font-size: clamp(2rem, 2rem + 2vw, 3.5rem);
+}
+.hero-sub{
+  font-size: clamp(1rem, .9rem + .5vw, 1.25rem);
+  color: #2f2f2f;
+}
+
+/* Accessibility: focus styles */
+:focus-visible{
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{
+  position: fixed; left: 1rem; top: 1rem; width: auto; height: auto;
+  background: var(--navy); color: white; padding: .5rem .75rem; border-radius: .5rem; z-index: 1100;
+}
+
+/* Navbar */
+.navbar{
+  --bs-navbar-padding-y: .75rem;
+  backdrop-filter: saturate(180%) blur(6px);
+}
+.navbar-brand img{ height: 40px; width: auto;}
+.nav-link{ font-weight: 600; }
+.nav-link:hover, .nav-link:focus{ text-decoration: underline; text-underline-offset: 4px; }
+
+/* Buttons */
+.btn-brand{
+  background: var(--amber);
+  color: #111;
+  border: none;
+  font-weight: 800;
+  border-radius: .75rem;
+  padding: .75rem 1.25rem;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-brand:hover, .btn-brand:focus{
+  background: var(--amber-700);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  color: #111;
+}
+.btn-outline-navy{
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  background: transparent;
+  border-radius: .75rem;
+  font-weight: 700;
+  padding: .6rem 1rem;
+}
+.btn-outline-navy:hover, .btn-outline-navy:focus{
+  background: var(--navy);
+  color: white;
+}
+
+/* Sections */
+.section{ padding: clamp(2.5rem, 6vw, 5rem) 0; }
+.section--alt{ background: #ffffff; }
+.section--band{ background: var(--navy); color: white; }
+.section .section-title{
+  margin-bottom: 1rem;
+}
+.section .section-lead{
+  color: #3a3a3a;
+  max-width: 60ch;
+}
+
+/* Cards */
+.card-well{
+  border: none;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,.05);
+  height: 100%;
+  overflow: hidden;
+}
+.card-well .card-img-top{
+  object-fit: cover;
+  height: 200px;
+}
+.card-well .card-body{ padding: 1.25rem 1.25rem 1.5rem; }
+.card-well .card-title{ color: var(--navy); font-weight: 800; }
+.card-well .card-text{ color: #424242; }
+
+/* Feature / hero visuals */
+.hero{
+  position: relative;
+  background: linear-gradient(180deg, rgba(165,197,194,.15), rgba(117,201,227,.12));
+}
+.hero-visual{
+  aspect-ratio: 16/9;
+  background: #eaf5f7;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Footer */
+.site-footer{
+  background: var(--navy);
+  color: white;
+  padding: 2.5rem 0;
+}
+.site-footer a{ color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.site-footer .brand{ font-weight: 800; letter-spacing: .5px; }
+
+/* Utilities */
+.text-navy{ color: var(--navy) !important; }
+.bg-soft{ background: var(--soft) !important; }
+.bg-aqua{ background: var(--aqua) !important; }
+.bg-sky{ background: var(--sky) !important; }
+.rounded-xl{ border-radius: 1rem; }
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce){
+  *{ transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
