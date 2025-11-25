@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { base44 } from "@/api/base44Client";
+//import { base44 } from "@/api/base44Client";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await base44.entities.ContactSubmission.create(formData);
+    //await base44.entities.ContactSubmission.create(formData);
     setSubmitted(true);
   };
 
