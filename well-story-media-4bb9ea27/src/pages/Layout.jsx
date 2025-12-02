@@ -17,6 +17,11 @@ export default function Layout({ children, currentPageName }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const navigationItems = [
     { title: "Home", url: createPageUrl("Home") },
     { title: "About", url: createPageUrl("About") },
@@ -62,7 +67,7 @@ export default function Layout({ children, currentPageName }) {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_689cdd99dca9ca6bab2a8457/4a1d1a6b8_wellstory-logo.png" 
                 alt="WellStory Media" 
-                className="h-[85px] transition-transform duration-300 group-hover:scale-105"
+                className="h-[60px] md:h-[85px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
 

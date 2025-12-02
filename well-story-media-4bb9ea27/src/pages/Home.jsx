@@ -98,7 +98,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="font-['Lato'] text-4xl lg:text-5xl text-[#154771] font-normal mb-4">
 
-              How great are you at what you do?
+              Your Mission Deserves a Powerful Story
             </motion.h2>
           </div>
 
@@ -138,7 +138,7 @@ export default function Home() {
                 to={createPageUrl("About")}
                 className="inline-flex items-center gap-2 text-[#75C9E3] hover:text-[#FFB629] font-['Lato'] font-semibold text-lg transition-colors group">
 
-                Learn more about our process
+                Explore how we can help
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -185,8 +185,8 @@ export default function Home() {
                   </p>
                 </div>
                 {index < processSteps.length - 1 &&
-              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                    <ArrowRight size={24} className="text-[#FFB629]" />
+              <div className="hidden md:block absolute top-1/2 -right-8 transform -translate-y-1/2 z-10">
+                    <ArrowRight size={72} className="text-[#FFB629]" />
                   </div>
               }
               </motion.div>

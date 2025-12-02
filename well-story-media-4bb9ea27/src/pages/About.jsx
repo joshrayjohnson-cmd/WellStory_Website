@@ -35,7 +35,7 @@ export default function About() {
   {
     icon: Radio,
     title: "Live Events",
-    description: "Seamless live event production with broadcast-quality results."
+    description: "Seamless live event production with broadcast-quality results"
   }];
 
 

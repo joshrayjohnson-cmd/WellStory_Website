@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
@@ -6,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-//import { base44 } from "@/api/base44Client";
+import { base44 } from "@/api/base44Client";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,8 +25,16 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //await base44.entities.ContactSubmission.create(formData);
-    setSubmitted(true);
+    try {
+      await base44.integrations.Core.SendEmail({
+        to: "joshrayjohnson@gmail.com",
+        subject: `New Contact Form Submission from ${formData.name}`,
+        body: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    }
   };
 
   return (

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -6,12 +5,14 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Insights() {
+
   const featuredArticle = {
     title: "The Power of Story-Driven Video in Modern Marketing",
     excerpt: "Practical news, proven strategies, and real-world examples to help you turn story-driven video into measurable results for your organization.",
     date: "January 15, 2025",
     readTime: "5 min read",
-    category: "Strategy"
+    category: "Strategy",
+    url: "https://www.forbes.com/councils/forbesagencycouncil/2024/03/07/understanding-the-power-of-video-for-marketing/"
   };
 
   const previousArticles = [
@@ -92,8 +93,8 @@ export default function Insights() {
             </div>
 
             <div>
-              <div className="inline-block px-4 py-1 bg-[#FFB629] text-white font-['Lato'] font-semibold rounded-full mb-4">
-                Featured
+              <div className="mb-4">
+                <span className="text-[#FFB629] font-['Lato'] font-semibold text-lg">Featured</span>
               </div>
               <h2 className="font-['Lato'] text-4xl text-[#154771] font-semibold mb-4">
                 {featuredArticle.title}
@@ -111,10 +112,15 @@ export default function Insights() {
               <p className="text-lg text-[#333333] leading-relaxed mb-6">
                 {featuredArticle.excerpt}
               </p>
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#75C9E3] text-white font-['Lato'] font-semibold rounded-full hover:bg-[#154771] transition-all duration-300 group">
+              <a 
+                href={featuredArticle.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#75C9E3] text-[#154771] font-['Lato'] font-semibold text-lg rounded-full hover:bg-[#75C9E3] hover:text-white transition-all duration-300"
+              >
                 Read More
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -192,6 +198,7 @@ export default function Insights() {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
-}
+
+      </div>
+      );
+      }
