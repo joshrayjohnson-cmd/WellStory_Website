@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -43,16 +42,14 @@ export default function About() {
     <div className="bg-[#FEFCF9]">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        {/* Background Video Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#154771] via-[#75C9E3] to-[#89C7CA]">
-          <div className="w-full h-full flex items-center justify-center text-white/30">
-            <div className="text-center p-8">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                <div className="w-0 h-0 border-t-12 border-t-transparent border-l-16 border-l-white/50 border-b-12 border-b-transparent ml-2" />
-              </div>
-              <p className="font-['Lato'] text-lg">Background Video Placeholder</p>
-            </div>
-          </div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6900ed629bc4c59f4bb9ea27/fc88f12fb_MontanaExperienceAboutHero.jpg"
+            alt="Montana Landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 via-orange-500/15 to-yellow-600/20" />
         </div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -83,7 +80,7 @@ export default function About() {
               className="order-2 lg:order-1">
 
               <h2 className="font-['Lato'] text-4xl text-[#154771] font-semibold mb-6">
-                Biography
+                Your Story in Motion
               </h2>
               <div className="space-y-4 text-lg text-[#333333] leading-relaxed">
                 <p>
@@ -113,15 +110,12 @@ export default function About() {
               viewport={{ once: true }}
               className="order-1 lg:order-2">
 
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#154771] to-[#75C9E3]">
-                <div className="w-full h-full flex items-center justify-center text-white">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-6xl">👤</div>
-                    </div>
-                    <p className="font-['Lato'] text-lg">Headshot or<br />Relevant Image Placeholder</p>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6900ed629bc4c59f4bb9ea27/f498fdddd_RedCamera.jpg"
+                  alt="Professional RED Cinema Camera"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>
@@ -185,8 +179,7 @@ export default function About() {
               Our Expertise
             </h2>
             <p className="text-xl text-[#333333] max-w-3xl mx-auto">
-              A comprehensive explanation of the services we offer and the collaborative process 
-              that ensures your vision becomes reality
+              Blending our full suite of production services with a collaborative, client-focused process, we bring your story to life.
             </p>
           </motion.div>
 

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -68,17 +67,15 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative">
 
-              {/* Video Placeholder */}
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#154771] to-[#75C9E3]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                      <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
-                    </div>
-                    <p className="font-['Lato'] text-lg">Demo Reel Placeholder</p>
-                    <p className="text-sm text-white/80 mt-2">Video content showcase</p>
-                  </div>
-                </div>
+              {/* Demo Reel Video */}
+              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/E5TMHOy6HSA?autoplay=1&mute=1&loop=1&playlist=E5TMHOy6HSA&controls=0&modestbranding=1&rel=0&showinfo=0"
+                  title="WellStory Media Demo Reel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -z-10 -top-6 -right-6 w-72 h-72 bg-[#FFB629]/20 rounded-full blur-3xl" />
@@ -107,16 +104,13 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-[#89C7CA] to-[#75C9E3]">
+              className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
 
-              <div className="w-full h-full flex items-center justify-center text-white">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                    <div className="text-6xl">📹</div>
-                  </div>
-                  <p className="font-['Lato'] text-lg">Headshot / Relevant Image Placeholder</p>
-                </div>
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6900ed629bc4c59f4bb9ea27/a8c206900_EvryoneHasAStoryToTell.jpg"
+                alt="Everyone Has A Story Worth Telling"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
 
             <motion.div

@@ -189,7 +189,14 @@ export default function Contact() {
     <div className="bg-[#FEFCF9]">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#154771]/10 via-[#75C9E3]/5 to-transparent" />
+        <div className="absolute inset-0">
+          <img 
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6900ed629bc4c59f4bb9ea27/068c5cb1f_paul-skorupskas-7KLa-xLbSXA-unsplash.jpg"
+            alt="Camera lens with mountain landscape"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#154771]/40" />
+        </div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -198,7 +205,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-['Lato'] font-semibold text-5xl lg:text-6xl text-[#154771] mb-6">
+            <h1 className="font-['Lato'] font-semibold text-5xl lg:text-6xl text-white mb-6">
               Every great project begins with a conversation.
             </h1>
           </motion.div>

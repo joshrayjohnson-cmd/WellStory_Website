@@ -81,15 +81,12 @@ export default function Insights() {
             viewport={{ once: true }}
             className="grid lg:grid-cols-2 gap-12 items-center mb-8"
           >
-            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#154771] via-[#75C9E3] to-[#FFB629]">
-              <div className="w-full h-full flex items-center justify-center text-white">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                    <div className="text-5xl">📹</div>
-                  </div>
-                  <p className="font-['Lato'] text-lg">Featured Article<br />Background Video/Image</p>
-                </div>
-              </div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?q=80&w=2949&auto=format&fit=crop"
+                alt="Video Marketing"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div>
@@ -139,39 +136,49 @@ export default function Insights() {
           </motion.h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {previousArticles.map((article, index) => (
-              <motion.div
-                key={article.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#75C9E3]">
-                  <div className="aspect-video bg-gradient-to-br from-[#154771] to-[#75C9E3]">
-                    <div className="w-full h-full flex items-center justify-center text-white">
-                      <div className="text-center p-4">
-                        <div className="text-4xl mb-2">📄</div>
-                        <p className="text-sm font-['Lato']">Article Image</p>
+            {previousArticles.map((article, index) => {
+              const articleImages = [
+                "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2940&auto=format&fit=crop", // Nonprofit/community
+                "https://images.unsplash.com/photo-1551135049-8a33b5883817?q=80&w=2940&auto=format&fit=crop", // Government building
+                "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2940&auto=format&fit=crop", // Behind the scenes production
+                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2915&auto=format&fit=crop", // Business/ROI charts
+                "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6900ed629bc4c59f4bb9ea27/283deec4a_colrograding.jpg", // Color grading/editing
+                "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=2940&auto=format&fit=crop"  // Interview/microphone
+              ];
+              
+              return (
+                <motion.div
+                  key={article.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#75C9E3]">
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={articleImages[index]}
+                        alt={article.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="inline-block px-3 py-1 bg-[#89C7CA] text-white text-xs font-['Lato'] font-semibold rounded-full mb-3">
+                        {article.category}
+                      </div>
+                      <h3 className="font-['Lato'] text-xl text-[#154771] font-semibold mb-3 group-hover:text-[#75C9E3] transition-colors">
+                        {article.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-sm text-[#333333]">
+                        <Calendar size={14} className="text-[#75C9E3]" />
+                        <span>{article.date}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <div className="inline-block px-3 py-1 bg-[#89C7CA] text-white text-xs font-['Lato'] font-semibold rounded-full mb-3">
-                      {article.category}
-                    </div>
-                    <h3 className="font-['Lato'] text-xl text-[#154771] font-semibold mb-3 group-hover:text-[#75C9E3] transition-colors">
-                      {article.title}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sm text-[#333333]">
-                      <Calendar size={14} className="text-[#75C9E3]" />
-                      <span>{article.date}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
