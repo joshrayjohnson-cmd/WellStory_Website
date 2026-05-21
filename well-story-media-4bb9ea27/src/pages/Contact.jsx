@@ -206,7 +206,7 @@ export default function Contact() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 className="font-['Lato'] font-semibold text-5xl lg:text-6xl text-white mb-6">
-              Every great project begins with a conversation.
+              Every Great Project Begins With a Conversation.
             </h1>
           </motion.div>
         </div>

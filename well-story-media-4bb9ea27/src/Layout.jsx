@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -24,9 +23,9 @@ export default function Layout({ children, currentPageName }) {
 
   const navigationItems = [
     { title: "Home", url: createPageUrl("Home") },
+    { title: "Live Production", url: createPageUrl("LiveProduction") },
+    { title: "Content Production", url: createPageUrl("ContentProduction") },
     { title: "About", url: createPageUrl("About") },
-    { title: "Insights", url: createPageUrl("Insights") },
-    { title: "Contact", url: createPageUrl("Contact") },
   ];
 
   return (
@@ -65,9 +64,9 @@ export default function Layout({ children, currentPageName }) {
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center gap-3 group">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_689cdd99dca9ca6bab2a8457/4a1d1a6b8_wellstory-logo.png" 
+                src="https://media.base44.com/images/public/6900ed629bc4c59f4bb9ea27/4b7a4f3ec_WellStoryLogo2.png" 
                 alt="WellStory Media" 
-                className="h-[60px] md:h-[85px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-[25px] md:h-[35px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
 
@@ -98,7 +97,7 @@ export default function Layout({ children, currentPageName }) {
               to={createPageUrl("Contact")}
               className="hidden md:block px-6 py-2.5 bg-[#FFB629] text-white font-['Lato'] font-semibold rounded-full hover:bg-[#75C9E3] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Start Your Journey
+              Contact Us
             </Link>
 
             {/* Mobile Menu Button */}
@@ -134,7 +133,7 @@ export default function Layout({ children, currentPageName }) {
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-center py-3 px-6 bg-[#FFB629] text-white font-['Lato'] font-semibold rounded-full"
               >
-                Start Your Journey
+                Contact Us
               </Link>
             </div>
           </div>
@@ -152,12 +151,12 @@ export default function Layout({ children, currentPageName }) {
           <div className="grid md:grid-cols-3 gap-12">
             <div>
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_689cdd99dca9ca6bab2a8457/4a1d1a6b8_wellstory-logo.png" 
+                src="https://media.base44.com/images/public/6900ed629bc4c59f4bb9ea27/1b13a7c41_WellStoryLogo2-BW.png" 
                 alt="WellStory Media" 
-                className="h-10 mb-4 brightness-0 invert"
+                className="h-5 mb-4 brightness-0 invert"
               />
               <p className="text-[#89C7CA] leading-relaxed">
-                Story-driven video production that connects and inspires.
+                Story-driven video production<br />that connects and inspires.
               </p>
             </div>
             
@@ -192,7 +191,7 @@ export default function Layout({ children, currentPageName }) {
           </div>
 
           <div className="border-t border-[#75C9E3]/30 mt-12 pt-8 text-center text-[#89C7CA] text-sm">
-            <p>© 2025 WellStory Media. All rights reserved.</p>
+            <p>© 2026 WellStory Media. All rights reserved.</p>
           </div>
         </div>
       </footer>
