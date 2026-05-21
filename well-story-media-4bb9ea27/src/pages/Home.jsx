@@ -32,11 +32,11 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="w-full mb-8">
 
-              <h1 className="font-['Lato'] font-bold text-6xl lg:text-7xl text-[#154771] leading-tight mb-6">
+              <h1 className="font-['Lato'] font-bold text-4xl md:text-5xl lg:text-7xl text-[#154771] leading-tight mb-6">
                 Professional Video Production
                 <span className="block">{"& Live Event Broadcasting"}</span>
               </h1>
-              <p className="text-xl text-[#333333] leading-relaxed mb-8 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-[#333333] leading-relaxed mb-8 max-w-3xl mx-auto">
                 Helping organizations communicate, promote, document, and broadcast the moments that matter through cinematic storytelling and professional live production.
               </p>
 
