@@ -51,7 +51,7 @@ export default function Home() {
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/E5TMHOy6HSA"
+                  src="https://www.youtube.com/embed/E5TMHOy6HSA?autoplay=1&loop=1&playlist=E5TMHOy6HSA&mute=1&controls=0"
                   title="WellStory Media Demo Reel"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
