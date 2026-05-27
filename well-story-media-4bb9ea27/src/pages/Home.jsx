@@ -9,7 +9,7 @@ export default function Home() {
     {
       icon: Package,
       title: "Live Production",
-      description: "Full-scale live event broadcasting and streaming services for conferences, sports events, and special occasions."
+      description: "Full-scale live event broadcasting and streaming services for conferences, sports, and events."
     },
     {
       icon: Sparkles,
@@ -37,7 +37,7 @@ export default function Home() {
                 <span className="block">{"& Live Event Broadcasting"}</span>
               </h1>
               <p className="text-base md:text-xl text-[#333333] leading-relaxed mb-8 max-w-3xl mx-auto">
-                Helping organizations communicate, promote, document, and broadcast the moments that matter through cinematic storytelling and professional live production.
+                Helping organizations communicate, promote, document, and broadcast through professional live production and cinematic storytelling.
               </p>
 
             </motion.div>
@@ -51,7 +51,7 @@ export default function Home() {
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/E5TMHOy6HSA?autoplay=1&loop=1&playlist=E5TMHOy6HSA&mute=1&controls=0"
+                  src="https://www.youtube.com/embed/E5TMHOy6HSA?autoplay=1&amp;loop=1&amp;playlist=E5TMHOy6HSA&amp;mute=1&amp;controls=0"
                   title="WellStory Media Demo Reel"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -68,7 +68,7 @@ export default function Home() {
                 <Link
                   to={createPageUrl("Contact")}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[#FFB629] text-white font-['Lato'] font-semibold text-lg rounded-full hover:bg-[#154771] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
-                  Request a Quote
+                  Contact Us
                   <ArrowRight size={20} />
                 </Link>
               </motion.div>
@@ -175,7 +175,7 @@ export default function Home() {
             <Link
               to={createPageUrl("Contact")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#FFB629] text-white font-['Lato'] font-semibold text-lg rounded-full hover:bg-[#75C9E3] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
-              Request a Quote
+              Contact Us
               <ArrowRight size={20} />
             </Link>
           </motion.div>
@@ -195,7 +195,7 @@ export default function Home() {
               Why Organizations Choose Well Story Media
             </h2>
             <p className="text-xl text-[#333333] max-w-3xl mx-auto">
-              Professional storytelling, technical expertise, and dependable execution backed by more than 20 years of experience in media, broadcasting, and communications.
+              Professional storytelling, cinematic production, technical expertise, and reliable execution backed by more than 20 years of experience in media, broadcasting, and communications.
             </p>
           </motion.div>
 
@@ -247,7 +247,7 @@ export default function Home() {
             <Link
               to={createPageUrl("Contact")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#FFB629] text-white font-['Lato'] font-semibold text-lg rounded-full hover:bg-[#75C9E3] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
-              Request a Quote
+              Contact Us
               <ArrowRight size={20} />
             </Link>
           </motion.div>

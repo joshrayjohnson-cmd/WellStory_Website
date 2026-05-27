@@ -191,7 +191,7 @@ export default function Layout({ children, currentPageName }) {
           </div>
 
           <div className="border-t border-[#75C9E3]/30 mt-12 pt-8 text-center text-[#89C7CA] text-sm">
-            <p>© 2026 WellStory Media. All rights reserved.</p>
+            <p>© 2026 Well Story Media, LLC. All rights reserved.</p>
           </div>
         </div>
       </footer>

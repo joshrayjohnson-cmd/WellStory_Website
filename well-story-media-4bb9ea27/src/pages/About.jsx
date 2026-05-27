@@ -29,7 +29,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16">
 
-            <h1 className="text-[#FFFFFF] mb-6 text-5xl font-normal lg:text-6xl font-['Lato'] italic">Built on Experience • Driven by Story
+            <h1 className="text-[#FFFFFF] mb-6 text-5xl font-normal lg:text-6xl font-['Lato'] italic">Built on Experience and Driven by Story
 
             </h1>
             <p className="text-[#ffffff] mx-auto text-xl leading-relaxed max-w-3xl">More than 20 years of media, communications, and production experience serving organizations across Montana and beyond.
@@ -50,14 +50,15 @@ export default function About() {
               className="order-2 lg:order-1">
               <h2 className="font-['Lato'] text-4xl text-[#154771] font-semibold mb-6">Meet Joshua Johnson</h2>
               <div className="space-y-4 text-lg text-[#333333] leading-relaxed">
-                <p>Well Story Media was founded by Joshua Johnson, a Montana-based producer, broadcaster, and communications professional with more than 20 years of experience helping organizations tell meaningful stories.</p>
-                <p>His background spans military broadcasting, public affairs, strategic communications, live event production, and commercial video production. Throughout his career, he has led media operations, managed broadcast teams, coordinated national media coverage, and produced content for audiences ranging from local communities to international organizations.</p>
-                <p>Today, he brings that same professionalism and attention to detail to every project whether it's a documentary, marketing campaign, conference livestream, or community event.</p>
+                <p>Well Story Media was founded by Joshua Johnson, a Montana-based producer, broadcaster, Army veteran, and communications professional with more than 20 years of experience helping organizations tell meaningful stories.</p>
+                <p>His background spans military broadcasting, public affairs, strategic communications, live event production, cinematography, and commercial video production. During his military career, Josh was named Department of the Army Broadcaster of the Year while leading and supporting broadcast and multimedia operations serving audiences around the world.</p>
+                <p>Throughout his career, he has led media operations, managed broadcast teams, coordinated national media coverage, and produced content for audiences ranging from local communities to international organizations. In addition to his communications and broadcast experience, he has worked as an editor and director of photography on films recognized with awards for Best Editing and Best Film at regional and international film festivals.</p>
+                <p>Today, he brings that same professionalism, cinematic approach, and attention to detail to every project whether it's a documentary, marketing campaign, conference livestream, or community event.</p>
               </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="order-1 lg:order-2">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
@@ -95,7 +96,7 @@ export default function About() {
               viewport={{ once: true }}
               className="order-2 lg:order-2">
               <h2 className="font-['Lato'] text-4xl text-[#154771] font-semibold mb-6">Proudly Based in Montana</h2>
-              <p className="text-lg text-[#333333] leading-relaxed mb-4">From the mountains and small towns of Montana to conference halls, athletic venues, and community events across the region, Well Story Media helps organizations share stories that matter.</p>
+              <p className="text-lg text-[#333333] leading-relaxed mb-4">From the mountains and small towns of Montana to conference halls, athletic venues, and community events across the region, Well Story Media helps organizations connect with audiences through professional storytelling and visual production.</p>
               <p className="text-lg text-[#333333] leading-relaxed mb-6">We understand the unique character of Montana communities and work with clients throughout the state to create authentic content that connects with audiences.</p>
               <div className="space-y-6">
                 {[
@@ -190,7 +191,7 @@ export default function About() {
             <Link
               to={createPageUrl("Contact")}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#FFB629] text-white font-['Lato'] font-semibold text-lg rounded-full hover:bg-[#75C9E3] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1">
-              Request a Quote
+              Contact Us
               <ArrowRight size={20} />
             </Link>
           </motion.div>
