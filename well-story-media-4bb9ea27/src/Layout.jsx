@@ -187,6 +187,9 @@ export default function Layout({ children, currentPageName }) {
               >
                 Contact Us
               </Link>
+              <p className="text-[#89C7CA] mt-4">
+                Helena, MT 59601
+              </p>
             </div>
           </div>
 
